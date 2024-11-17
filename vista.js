@@ -1,5 +1,3 @@
-// vista.js
-
 // Actualiza el mensaje de error o éxito en los campos
 function mostrarMensaje(idCampo, mensaje, tipo) {
   const elemento = document.getElementById(idCampo);
@@ -15,13 +13,15 @@ function mostrarBienvenida(usuario) {
 
 // Gestiona las acciones de contenido en el div
 function gestionarContenido(accion) {
+
   const contenido = document.getElementById('contenido');
 
   if (accion === 'agregar') {
       // Crear un nuevo elemento <p>
       const p = document.createElement('p');
-      p.textContent = 'Bienvenid@ usuario';
+      p.textContent = 'Bienvenid@ ' + localStorage.getItem('usuario');
       contenido.appendChild(p);
+
   } else if (accion === 'eliminar') {
       // Eliminar el último elemento <p>
       if (contenido.lastChild) {
