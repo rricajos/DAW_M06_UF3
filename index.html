@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form id="formRegistro">
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <span id="usernameError"></span><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="passwordError"></span><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+    <script src="modelo.js"></script>
+    <script src="vista.js"></script>
+    <script src="controlador.js"></script>
+</body>
+</html>
